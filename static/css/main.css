@@ -1,0 +1,265 @@
+/* The color palette is inspired from https://coolors.co */
+:root {
+  /* --primary: #7957d5; 
+	--primaryDark: #5b42a0;*/
+  --primary: #167df0;
+  --primaryDark: #1163c2;
+  --primaryTooDark: rgb(38, 113, 156);
+  --primaryLight: #2488fa;
+  /* --edit:#FF0000; */
+  --edit: #EA526F;
+  --background: #E8E8E8;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */
+  background: transparent;
+  /* optional: just make scrollbar invisible */
+}
+
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+body {
+  font-family: 'Raleway', sans-serif !important;
+  height: 100vh !important;
+  margin: 0;
+  padding: 0;
+  /* background-color: #FFCC00; */
+  background-color: var(--background);
+  overflow-y: hidden;
+  overflow: -moz-scrollbars-none;
+}
+
+.is-fullheight {
+  height: 100% !important;
+}
+
+.is-fullwidth {
+  width: 100% !important;
+}
+
+.is-flex-column{
+	display: flex !important;
+	flex-direction: column;
+}
+
+.justify-content-center {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.justify-content-end {
+  display: flex !important;
+	justify-content: flex-end !important;
+	align-items: stretch !important;
+	-webkit-align-items:stretch !important;
+}
+
+.justify-content-start {
+  display: flex !important;
+	justify-content: flex-start !important;
+	align-items: stretch !important;
+	-webkit-align-items:stretch !important;
+}
+
+.justify-content-vertical-center {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+.is-flex-grow-2{
+	flex-grow: 2;
+}
+
+.is-flex-grow-1{
+	flex-grow: 1;
+}
+
+.m-r-5 {
+  margin-right: 5px;
+}
+
+.m-r-20 {
+  margin-right: 20px !important;
+}
+
+.m-l-10 {
+  margin-left: 10px !important;
+}
+
+.m-t-5 {
+  margin-top: 5px;
+}
+
+.m-b-5 {
+  margin-bottom: 5px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.h-100 {
+  height: 100vh !important;
+}
+
+.h-70 {
+  height: 70vh !important;
+}
+
+.h-80 {
+  height: 80vh !important;
+}
+
+.auto-scroll-y {
+  overflow-y: auto !important;
+}
+
+.modal-card-head,
+.modal-card-foot {
+  border-radius: 0px !important;
+}
+
+/* To keep warnings in the center - [START] */
+.is-horizontal-center {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.is-vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+/* To keep warnings in the center - [END] */
+
+.card.warning:hover {
+  cursor: auto !important;
+  background-color: #FFFFFF !important;
+  color: #4a4a4a !important;
+}
+
+.breadcrumb {
+  padding: 0.75rem !important;
+  margin-bottom: 0 !important;
+}
+
+.input {
+  border-radius: 0 !important;
+}
+
+.breadcrumb {
+  font-family: 'Roboto', sans-serif;
+}
+
+a.disabled {
+  color: #443f3f !important;
+  cursor: auto;
+}
+
+.num {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  font-size: medium;
+}
+
+.tooltip.is-tooltip-active:not(.is-loading)::after,
+.tooltip:hover:not(.is-loading)::after {
+  border-style: none !important;
+}
+
+.tooltip:after {
+  padding: 0px !important;
+}
+
+html,
+.columns {
+  background-color: #E8E8E8 !important;
+}
+
+.delete:hover,
+.modal-close:hover {
+	background-color: red !important;
+}
+
+.is-fit-content{
+	height: auto !important;
+	width: fit-content !important;
+}
+
+.is-200x128{
+	height: 128px !important;
+	width: 200px;
+}
+
+.is-transparent{
+	background-color: transparent !important;
+}
+
+.center-position{
+	position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.notification.is-info,.notification.is-warning{
+	width: 40% !important;
+	margin: auto;
+}
+
+.select select{
+	border-radius: 0px !important;
+}
+
+.is-autoxauto{
+	height: 100% !important;
+	width: 100% !important;
+}
+
+.circle {
+	width: 150px !important;
+	height: 150px !important;
+	display: flex;
+	border-radius: 75px;
+	justify-content: center;
+	background-color: #FFFFFF;
+	margin: auto;
+}
+
+.inside {
+	display: flex;
+	width: fit-content;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.is-borderless{
+	border: none !important;
+}
+
+.is-hoverless{
+	pointer-events: none !important;
+}
+
+.is-shadowless{
+	box-shadow: none !important
+}

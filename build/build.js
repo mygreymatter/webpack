@@ -4,7 +4,7 @@ require('./check-versions')()
 let mode = ''
 
 if(process.argv.length > 2){
-	mode = process.argv[2] === 'dev' ? 'development' : 'production'
+	mode = process.argv[2]
 }
 
 process.env.NODE_ENV = 'production'
@@ -17,13 +17,12 @@ const webpack = require('webpack')
 const config = require('../config')
 const myMode = require('../config/mode')
 myMode.mode = mode
-config.mode = mode
 
 console.log(`My Mode: ${myMode.mode}`)
 
 const webpackConfig = require('./webpack.prod.conf')
 
-const spinner = ora('building for ' + (mode === 'development' ? 'development...':'production...'))
+const spinner = ora('building for ' + (mode === 'dev' ? 'development...':'production...'))
 spinner.start()
 
 rm(path.join(config.build.getAssetsRoot(), config.build.getAssetsSubDirectory()), err => {

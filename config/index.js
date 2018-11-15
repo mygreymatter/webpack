@@ -6,7 +6,6 @@ const path = require('path')
 const appMode = require('./mode')
 
 module.exports = {
-  mode: '',
   dev: {
 
     // Paths
@@ -50,18 +49,14 @@ module.exports = {
 
   build: {
     getIndex() {
-      return appMode.mode === 'development' ? '../dev/public/index.html' : '../prod/public/index.html'
+      return path.resolve(__dirname, '../dist/' + appMode.mode + '/public/index.html')
     },
-    // Template for index.html
-		// Paths
-		//assetsRoot:path.resolve(__dirname, '../dist'),
-		getAssetsRoot(){
-			return appMode.mode === 'development' ? path.resolve(__dirname, '../dev'): path.resolve(__dirname, '../prod')
-		},
+    getAssetsRoot() {
+      return path.resolve(__dirname, '../dist/' + appMode.mode)
+    },
     getAssetsSubDirectory() {
-			//return appMode.mode === 'development' ? 'dev/public/static' : 'prod/public/static'
-			return 'public/static'
-		},
+      return 'public/static'
+    },
     assetsPublicPath: '/',
 
     /**
