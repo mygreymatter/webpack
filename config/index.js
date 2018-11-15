@@ -50,14 +50,17 @@ module.exports = {
 
   build: {
     getIndex() {
-      return appMode.mode === 'development' ? '../dist/dev/public/index.html' : '../dist/prod/public/index.html'
+      return appMode.mode === 'development' ? '../dev/public/index.html' : '../prod/public/index.html'
     },
     // Template for index.html
 		// Paths
-		assetsRoot:path.resolve(__dirname, '../dist'),
+		//assetsRoot:path.resolve(__dirname, '../dist'),
+		getAssetsRoot(){
+			return appMode.mode === 'development' ? path.resolve(__dirname, '../dev'): path.resolve(__dirname, '../prod')
+		},
     getAssetsSubDirectory() {
-			return appMode.mode === 'development' ? 'dev/public/static' : 'prod/public/static'
-			//return 'dev/public/static'
+			//return appMode.mode === 'development' ? 'dev/public/static' : 'prod/public/static'
+			return 'public/static'
 		},
     assetsPublicPath: '/',
 
